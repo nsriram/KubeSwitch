@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+
+Pods/
+Podfile.lock
+
+build/
+KubeSwitch.xcodeproj/project.xcworkspace/xcuserdata/
+KubeSwitch.xcodeproj/xcuserdata/
+
+KubeSwitch.xcworkspace/project.xcworkspace/xcuserdata/
+KubeSwitch.xcworkspace/xcuserdata/
