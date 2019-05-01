@@ -10,15 +10,19 @@
 		C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */; };
 		C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C88E2279E89600BF77B2 /* Assets.xcassets */; };
 		C3A5C8922279E89600BF77B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C8902279E89600BF77B2 /* Main.storyboard */; };
+		D95372B2AB46BBBE63431498 /* Pods_KubeSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.release.xcconfig"; sourceTree = "<group>"; };
+		8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 		C3A5C8872279E89400BF77B2 /* KubeSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KubeSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A5C88E2279E89600BF77B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3A5C8912279E89600BF77B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3A5C8932279E89600BF77B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A5C8942279E89600BF77B2 /* KubeSwitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KubeSwitch.entitlements; sourceTree = "<group>"; };
+		CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KubeSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95372B2AB46BBBE63431498 /* Pods_KubeSwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		769C0318DF4A6827A8EBFA15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF00EC32E069ED72CE6B657F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */,
+				1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C3A5C87E2279E89400BF77B2 = {
 			isa = PBXGroup;
 			children = (
 				C3A5C8892279E89400BF77B2 /* KubeSwitch */,
 				C3A5C8882279E89400BF77B2 /* Products */,
+				BF00EC32E069ED72CE6B657F /* Pods */,
+				769C0318DF4A6827A8EBFA15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,9 +91,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A5C8972279E89600BF77B2 /* Build configuration list for PBXNativeTarget "KubeSwitch" */;
 			buildPhases = (
+				D6C8FBDDD72556DFA00D6367 /* [CP] Check Pods Manifest.lock */,
 				C3A5C8832279E89400BF77B2 /* Sources */,
 				C3A5C8842279E89400BF77B2 /* Frameworks */,
 				C3A5C8852279E89400BF77B2 /* Resources */,
+				258154B2D4A837D37156D0E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -92,6 +118,7 @@
 				TargetAttributes = {
 					C3A5C8862279E89400BF77B2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -124,6 +151,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		258154B2D4A837D37156D0E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Yams/Yams.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yams.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C8FBDDD72556DFA00D6367 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KubeSwitch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3A5C8832279E89400BF77B2 /* Sources */ = {
@@ -265,11 +339,14 @@
 		};
 		C3A5C8982279E89600BF77B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KubeSwitch/KubeSwitch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KubeSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -277,17 +354,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kubehive.KubeSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		C3A5C8992279E89600BF77B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KubeSwitch/KubeSwitch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KubeSwitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,7 +376,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kubehive.KubeSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
