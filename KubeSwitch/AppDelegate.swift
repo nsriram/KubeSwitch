@@ -6,7 +6,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(
         withLength: NSStatusItem.variableLength)
     var currentMenuItem: NSMenuItem? = nil
-    let kubeConfigFile = "\(NSHomeDirectory())/Desktop/kubeConfig"
+    let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let menu = NSMenu()
@@ -60,8 +60,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func kubeConfig() -> String {
-        //Todo:
-        //let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
         var contents = ""
         do {
             contents = try String(contentsOfFile: self.kubeConfigFile)
