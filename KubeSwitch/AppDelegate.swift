@@ -3,17 +3,36 @@ import Yams
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    
+    let statusItem = NSStatusBar.system.statusItem(
+        withLength: NSStatusItem.variableLength)
+    var currentMenuItem: NSMenuItem? = nil
+    let kubeConfigFile = "\(NSHomeDirectory())/Desktop/kubeConfig"
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let menu = NSMenu()
         statusItem.menu = menu
         statusItem.button?.title = "KubeSwitch"
         self.addClusterNamesToMenu()
+        statusItem.menu?.addItem(NSMenuItem.separator())
         self.addExitMenu()
     }
 
-    @objc func noOperation(){
+    @objc func clusterSelected(_ sender: NSMenuItem){
+        do {
+            let config = kubeConfig()
+            var yamlContent = try Yams.load(yaml: config, .basic) as! [String: Any]
+            let newContext = sender.title
+            yamlContent["current-context"] = newContext
+            let newYamlContent = try Yams.dump(object: yamlContent)
+            try newYamlContent.write(toFile: self.kubeConfigFile,
+                                 atomically: true,
+                                 encoding: .utf8)
+            self.currentMenuItem?.state = NSControl.StateValue.off
+            sender.state = NSControl.StateValue.on
+            self.currentMenuItem = sender
+        } catch {
+            print(error)
+        }
     }
 
     func addClusterNamesToMenu(){
@@ -21,36 +40,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var loadedDictionary = [String: Any]()
         do {
             loadedDictionary = try Yams.load(yaml: config) as! [String : Any]
-            let currentClusterName = loadedDictionary["current-context"] as! String
+            let currentCluster = loadedDictionary["current-context"] as! String
             let clusters:Array = loadedDictionary["clusters"] as! [AnyObject]
             for cluster in clusters {
                 let clusterName = cluster["name"] as! String
                 let menuItem = NSMenuItem(title: clusterName,
-                                          action: #selector(AppDelegate.noOperation),
+                                          action: #selector(AppDelegate.clusterSelected),
                                           keyEquivalent: "")
-                if clusterName == currentClusterName {
-                    menuItem.state = NSOnState
+                if clusterName == currentCluster {
+                    menuItem.state = NSControl.StateValue.on
+                    self.currentMenuItem = menuItem
                 }
                 statusItem.menu?.addItem(menuItem)
             }
         } catch {
             print("Could not load kube config dictionary")
+            print(error)
         }
     }
     
     func kubeConfig() -> String {
-        let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
+        //Todo:
+        //let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
         var contents = ""
         do {
-            contents = try String(contentsOfFile: kubeConfigFile)
+            contents = try String(contentsOfFile: self.kubeConfigFile)
         } catch{
-            print("Could not load \(kubeConfigFile)")
+            print("Could not load \(self.kubeConfigFile)")
         }
         return contents
     }
     
     @objc func exit(){
-        NSApplication.shared().terminate(statusItem)
+        NSApplication.shared.terminate(statusItem)
     }
     
     func addExitMenu(){
