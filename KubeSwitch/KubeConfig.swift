@@ -19,6 +19,7 @@ class KubeConfig {
                                      atomically: true,
                                      encoding: .utf8)
         } catch {
+            print("Could not load write to \(self.kubeConfigFile)")
             print(error)
         }
     }

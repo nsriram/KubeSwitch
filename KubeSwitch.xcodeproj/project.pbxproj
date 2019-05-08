@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C322613B228256980096FD05 /* KubeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613A228256980096FD05 /* KubeConfig.swift */; };
+		C322613D2282589C0096FD05 /* YamlReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613C2282589C0096FD05 /* YamlReader.swift */; };
 		C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */; };
 		C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C88E2279E89600BF77B2 /* Assets.xcassets */; };
 		C3A5C8922279E89600BF77B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C8902279E89600BF77B2 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 		C322613A228256980096FD05 /* KubeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfig.swift; sourceTree = "<group>"; };
+		C322613C2282589C0096FD05 /* YamlReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlReader.swift; sourceTree = "<group>"; };
 		C3A5C8872279E89400BF77B2 /* KubeSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KubeSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A5C88E2279E89600BF77B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */,
+				C322613C2282589C0096FD05 /* YamlReader.swift */,
 				C322613A228256980096FD05 /* KubeConfig.swift */,
 				C3A5C88E2279E89600BF77B2 /* Assets.xcassets */,
 				C3A5C8902279E89600BF77B2 /* Main.storyboard */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C322613D2282589C0096FD05 /* YamlReader.swift in Sources */,
 				C322613B228256980096FD05 /* KubeConfig.swift in Sources */,
 				C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */,
 			);
