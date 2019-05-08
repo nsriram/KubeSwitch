@@ -2,7 +2,7 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    let kubeConfig = KubeConfig()
+    let kubeConfigReader = KubeConfigReader()
     let yamlReader = YamlReader()
     let statusItem = NSStatusBar.system.statusItem(
         withLength: NSStatusItem.variableLength)
@@ -18,16 +18,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func addClusterNamesToMenu(){
-        let config = self.kubeConfig.read()
-        var yamlContent = self.yamlReader.loadDictionary(yaml: config)
-        let currentCluster = yamlContent["current-context"] as! String
-        let clusters:Array = yamlContent["clusters"] as! [AnyObject]
+        let config = self.kubeConfigReader.read()
+        let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)
+        let clusters:Array = kubeConfig.clusters()
         for cluster in clusters {
             let clusterName = cluster["name"] as! String
             let menuItem = NSMenuItem(title: clusterName,
                                       action: #selector(AppDelegate.clusterSelected),
                                       keyEquivalent: "")
-            if clusterName == currentCluster {
+            if clusterName == kubeConfig.currentCluster() {
                 menuItem.state = NSControl.StateValue.on
                 self.selectedKubeContext = menuItem
             }
@@ -46,16 +45,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu?.addItem(newMenu);
     }
     
-    func applicationWillTerminate(_ aNotification: Notification) {
-    }
-
     @objc func clusterSelected(_ sender: NSMenuItem){
-        let config = self.kubeConfig.read()
-        var yamlContent = self.yamlReader.loadDictionary(yaml: config)
-        let selectedContext = sender.title
-        yamlContent["current-context"] = selectedContext
-        let newYamlContent = self.yamlReader.dumpString(object: yamlContent)
-        self.kubeConfig.write(fileContent: newYamlContent)
+        let config = self.kubeConfigReader.read()
+        let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)
+        kubeConfig.changeContext(newContext: sender.title)
+        let newYamlContent = self.yamlReader.dumpString(object: kubeConfig.yamlContent)
+        self.kubeConfigReader.write(fileContent: newYamlContent)
         self.selectedKubeContext?.state = NSControl.StateValue.off
         sender.state = NSControl.StateValue.on
         self.selectedKubeContext = sender
@@ -63,5 +58,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func exit(){
         NSApplication.shared.terminate(statusItem)
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
     }
 }

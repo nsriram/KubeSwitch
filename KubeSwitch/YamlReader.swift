@@ -1,15 +1,15 @@
 import Yams
 
 class YamlReader {
-    func loadDictionary(yaml: String) -> [String: Any] {
-        var yamlContent: [String: Any] = [:]
+    func loadKubeConfig(yaml: String) -> KubeConfig {
         do {
-            yamlContent = try Yams.load(yaml: yaml, .basic) as! [String: Any]
+            let yamlContent = try Yams.load(yaml: yaml, .basic) as! [String: Any]
+            return KubeConfig(yamlContent: yamlContent)
         } catch {
             print("[Error] Could not load yaml string as dictionary")
             print(error)
         }
-        return yamlContent
+        return KubeConfig(yamlContent: [:])
     }
 
     func dumpString(object: Any) -> String {

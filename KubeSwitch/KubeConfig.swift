@@ -1,26 +1,19 @@
-import Cocoa
-
 class KubeConfig {
-    let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
+    var yamlContent: [String: Any]
 
-    func read() -> String {
-        var contents = ""
-        do {
-            contents = try String(contentsOfFile: self.kubeConfigFile)
-        } catch{
-            print("Could not load \(self.kubeConfigFile)")
-        }
-        return contents
+    init(yamlContent: [String: Any]) {
+      self.yamlContent = yamlContent
     }
-    
-    func write(fileContent: String) {
-        do {
-            try fileContent.write(toFile: self.kubeConfigFile,
-                                     atomically: true,
-                                     encoding: .utf8)
-        } catch {
-            print("Could not load write to \(self.kubeConfigFile)")
-            print(error)
-        }
+
+    func currentCluster() -> String {
+      return self.yamlContent["current-context"] as! String
+    }
+
+    func clusters() -> Array<AnyObject> {
+      return self.yamlContent["clusters"] as! [AnyObject]
+    }
+
+    func changeContext(newContext: String){
+      self.yamlContent["current-context"] = newContext
     }
 }
