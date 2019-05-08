@@ -12,21 +12,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         self.statusItem.menu = menu
         self.statusItem.button?.title = "KubeSwitch"
-        self.addClusterNamesToMenu()
+        self.addContextNames()
         self.addMenuSeparator()
         self.addExitMenu()
     }
     
-    func addClusterNamesToMenu(){
+    func addContextNames(){
         let config = self.kubeConfigReader.read()
         let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)
-        let clusters:Array = kubeConfig.clusters()
-        for cluster in clusters {
-            let clusterName = cluster["name"] as! String
-            let menuItem = NSMenuItem(title: clusterName,
-                                      action: #selector(AppDelegate.clusterSelected),
+        let contexts:Array = kubeConfig.contexts()
+        for context in contexts {
+            let contextName = context["name"] as! String
+            let menuItem = NSMenuItem(title: contextName,
+                                      action: #selector(AppDelegate.contextSelected),
                                       keyEquivalent: "")
-            if clusterName == kubeConfig.currentCluster() {
+            if contextName == kubeConfig.currentContext() {
                 menuItem.state = NSControl.StateValue.on
                 self.selectedKubeContext = menuItem
             }
@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu?.addItem(newMenu);
     }
     
-    @objc func clusterSelected(_ sender: NSMenuItem){
+    @objc func contextSelected(_ sender: NSMenuItem){
         let config = self.kubeConfigReader.read()
         let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)
         kubeConfig.changeContext(newContext: sender.title)
