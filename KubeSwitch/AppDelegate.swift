@@ -3,11 +3,12 @@ import Yams
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var currentMenuItem: NSMenuItem? = nil
+
     let statusItem = NSStatusBar.system.statusItem(
         withLength: NSStatusItem.variableLength)
-    var currentMenuItem: NSMenuItem? = nil
-    let kubeConfigFile = "\(NSHomeDirectory())/.kube/config"
-
+    let kubeConfig = KubeConfig()
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let menu = NSMenu()
         statusItem.menu = menu
@@ -19,14 +20,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func clusterSelected(_ sender: NSMenuItem){
         do {
-            let config = kubeConfig()
+            let config = self.kubeConfig.read()
             var yamlContent = try Yams.load(yaml: config, .basic) as! [String: Any]
             let newContext = sender.title
             yamlContent["current-context"] = newContext
             let newYamlContent = try Yams.dump(object: yamlContent)
-            try newYamlContent.write(toFile: self.kubeConfigFile,
-                                 atomically: true,
-                                 encoding: .utf8)
+            self.kubeConfig.write(fileContent: newYamlContent)
             self.currentMenuItem?.state = NSControl.StateValue.off
             sender.state = NSControl.StateValue.on
             self.currentMenuItem = sender
@@ -34,9 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print(error)
         }
     }
-
+    
     func addClusterNamesToMenu(){
-        let config = kubeConfig()
+        let config = self.kubeConfig.read()
         var loadedDictionary = [String: Any]()
         do {
             loadedDictionary = try Yams.load(yaml: config) as! [String : Any]
@@ -57,16 +56,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Could not load kube config dictionary")
             print(error)
         }
-    }
-    
-    func kubeConfig() -> String {
-        var contents = ""
-        do {
-            contents = try String(contentsOfFile: self.kubeConfigFile)
-        } catch{
-            print("Could not load \(self.kubeConfigFile)")
-        }
-        return contents
     }
     
     @objc func exit(){
