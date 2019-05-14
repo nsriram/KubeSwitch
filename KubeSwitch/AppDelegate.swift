@@ -1,20 +1,27 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     let kubeConfigReader = KubeConfigReader()
     let yamlReader = YamlReader()
+
     let statusItem = NSStatusBar.system.statusItem(
         withLength: NSStatusItem.squareLength)
+
     var selectedKubeContext: NSMenuItem? = nil
     
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let menu = NSMenu()
-        self.statusItem.menu = menu
-        self.statusItem.button?.image = NSImage(named: NSImage.Name("KubeClusterImage"))
+    func menuWillOpen(_ menu: NSMenu){
+        self.statusItem.menu?.removeAllItems()
         self.addContextNames()
         self.addMenuSeparator()
         self.addExitMenu()
+    }
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        self.statusItem.button?.image = NSImage(named: NSImage.Name("KubeClusterImage"))
+        let menu = NSMenu()
+        self.statusItem.menu = menu
+        self.statusItem.menu?.delegate = self
     }
     
     func addContextNames(){
@@ -30,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 menuItem.state = NSControl.StateValue.on
                 self.selectedKubeContext = menuItem
             }
-            statusItem.menu?.addItem(menuItem)
+            self.statusItem.menu?.addItem(menuItem)
         }
     }
     
@@ -58,8 +65,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func exit(){
         NSApplication.shared.terminate(statusItem)
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
     }
 }
