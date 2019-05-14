@@ -5,13 +5,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let kubeConfigReader = KubeConfigReader()
     let yamlReader = YamlReader()
     let statusItem = NSStatusBar.system.statusItem(
-        withLength: NSStatusItem.variableLength)
+        withLength: NSStatusItem.squareLength)
     var selectedKubeContext: NSMenuItem? = nil
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let menu = NSMenu()
         self.statusItem.menu = menu
-        self.statusItem.button?.title = "KubeSwitch"
+        self.statusItem.button?.image = NSImage(named: NSImage.Name("KubeClusterImage"))
         self.addContextNames()
         self.addMenuSeparator()
         self.addExitMenu()
