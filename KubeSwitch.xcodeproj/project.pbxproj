@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B244C7094763750A990E4C8 /* Pods_KubeSwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5DE79E1EC6F4947624BC58 /* Pods_KubeSwitchTests.framework */; };
 		C322613B228256980096FD05 /* KubeConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613A228256980096FD05 /* KubeConfigReader.swift */; };
 		C322613D2282589C0096FD05 /* YamlReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613C2282589C0096FD05 /* YamlReader.swift */; };
 		C322613F22825F4B0096FD05 /* KubeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613E22825F4B0096FD05 /* KubeConfig.swift */; };
+		C374F93B228C29EC00E3249D /* KubeConfigSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */; };
 		C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */; };
 		C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C88E2279E89600BF77B2 /* Assets.xcassets */; };
 		C3A5C8922279E89600BF77B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C8902279E89600BF77B2 /* Main.storyboard */; };
 		D95372B2AB46BBBE63431498 /* Pods_KubeSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C374F93D228C29ED00E3249D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A5C87F2279E89400BF77B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A5C8862279E89400BF77B2;
+			remoteInfo = KubeSwitch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0D5DE79E1EC6F4947624BC58 /* Pods_KubeSwitchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KubeSwitchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		120BC42E388F94E30D07C38F /* Pods-KubeSwitchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitchTests.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.debug.xcconfig"; sourceTree = "<group>"; };
+		9AB94E5D613F8BA537BF7A23 /* Pods-KubeSwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitchTests.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests.release.xcconfig"; sourceTree = "<group>"; };
 		C322613A228256980096FD05 /* KubeConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigReader.swift; sourceTree = "<group>"; };
 		C322613C2282589C0096FD05 /* YamlReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlReader.swift; sourceTree = "<group>"; };
 		C322613E22825F4B0096FD05 /* KubeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfig.swift; sourceTree = "<group>"; };
+		C374F938228C29EC00E3249D /* KubeSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KubeSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigSpec.swift; sourceTree = "<group>"; };
+		C374F93C228C29ED00E3249D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A5C8872279E89400BF77B2 /* KubeSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KubeSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A5C88E2279E89600BF77B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +50,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C374F935228C29EC00E3249D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B244C7094763750A990E4C8 /* Pods_KubeSwitchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3A5C8842279E89400BF77B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */,
+				0D5DE79E1EC6F4947624BC58 /* Pods_KubeSwitchTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,14 +83,26 @@
 			children = (
 				8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */,
 				1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */,
+				120BC42E388F94E30D07C38F /* Pods-KubeSwitchTests.debug.xcconfig */,
+				9AB94E5D613F8BA537BF7A23 /* Pods-KubeSwitchTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C374F939228C29EC00E3249D /* KubeSwitchTests */ = {
+			isa = PBXGroup;
+			children = (
+				C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */,
+				C374F93C228C29ED00E3249D /* Info.plist */,
+			);
+			path = KubeSwitchTests;
 			sourceTree = "<group>";
 		};
 		C3A5C87E2279E89400BF77B2 = {
 			isa = PBXGroup;
 			children = (
 				C3A5C8892279E89400BF77B2 /* KubeSwitch */,
+				C374F939228C29EC00E3249D /* KubeSwitchTests */,
 				C3A5C8882279E89400BF77B2 /* Products */,
 				BF00EC32E069ED72CE6B657F /* Pods */,
 				769C0318DF4A6827A8EBFA15 /* Frameworks */,
@@ -74,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A5C8872279E89400BF77B2 /* KubeSwitch.app */,
+				C374F938228C29EC00E3249D /* KubeSwitchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +136,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C374F937228C29EC00E3249D /* KubeSwitchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C374F941228C29ED00E3249D /* Build configuration list for PBXNativeTarget "KubeSwitchTests" */;
+			buildPhases = (
+				AE2192DF056B6F13F43E6319 /* [CP] Check Pods Manifest.lock */,
+				C374F934228C29EC00E3249D /* Sources */,
+				C374F935228C29EC00E3249D /* Frameworks */,
+				C374F936228C29EC00E3249D /* Resources */,
+				1BC0C6AE96986C4E62E6D8D5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C374F93E228C29ED00E3249D /* PBXTargetDependency */,
+			);
+			name = KubeSwitchTests;
+			productName = KubeSwitchTests;
+			productReference = C374F938228C29EC00E3249D /* KubeSwitchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C3A5C8862279E89400BF77B2 /* KubeSwitch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3A5C8972279E89600BF77B2 /* Build configuration list for PBXNativeTarget "KubeSwitch" */;
@@ -125,6 +185,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "KubeHive LLC";
 				TargetAttributes = {
+					C374F937228C29EC00E3249D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C3A5C8862279E89400BF77B2;
+					};
 					C3A5C8862279E89400BF77B2 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -150,11 +214,19 @@
 			projectRoot = "";
 			targets = (
 				C3A5C8862279E89400BF77B2 /* KubeSwitch */,
+				C374F937228C29EC00E3249D /* KubeSwitchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C374F936228C29EC00E3249D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3A5C8852279E89400BF77B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +239,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BC0C6AE96986C4E62E6D8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		258154B2D4A837D37156D0E8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +283,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2192DF056B6F13F43E6319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KubeSwitchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D6C8FBDDD72556DFA00D6367 /* [CP] Check Pods Manifest.lock */ = {
@@ -214,6 +332,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C374F934228C29EC00E3249D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C374F93B228C29EC00E3249D /* KubeConfigSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3A5C8832279E89400BF77B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +353,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C374F93E228C29ED00E3249D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3A5C8862279E89400BF77B2 /* KubeSwitch */;
+			targetProxy = C374F93D228C29ED00E3249D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C3A5C8902279E89600BF77B2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -239,6 +373,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C374F93F228C29ED00E3249D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 120BC42E388F94E30D07C38F /* Pods-KubeSwitchTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B485R3V3QA;
+				INFOPLIST_FILE = KubeSwitchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kubehive.KubeSwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KubeSwitch.app/Contents/MacOS/KubeSwitch";
+			};
+			name = Debug;
+		};
+		C374F940228C29ED00E3249D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB94E5D613F8BA537BF7A23 /* Pods-KubeSwitchTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B485R3V3QA;
+				INFOPLIST_FILE = KubeSwitchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kubehive.KubeSwitchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KubeSwitch.app/Contents/MacOS/KubeSwitch";
+			};
+			name = Release;
+		};
 		C3A5C8952279E89600BF77B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +581,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C374F941228C29ED00E3249D /* Build configuration list for PBXNativeTarget "KubeSwitchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C374F93F228C29ED00E3249D /* Debug */,
+				C374F940228C29ED00E3249D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3A5C8822279E89400BF77B2 /* Build configuration list for PBXProject "KubeSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
