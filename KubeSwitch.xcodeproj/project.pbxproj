@@ -11,6 +11,7 @@
 		C322613B228256980096FD05 /* KubeConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613A228256980096FD05 /* KubeConfigReader.swift */; };
 		C322613D2282589C0096FD05 /* YamlReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613C2282589C0096FD05 /* YamlReader.swift */; };
 		C322613F22825F4B0096FD05 /* KubeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613E22825F4B0096FD05 /* KubeConfig.swift */; };
+		C358E0EB228C462E000E921B /* KubeContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358E0EA228C462E000E921B /* KubeContextMenu.swift */; };
 		C374F93B228C29EC00E3249D /* KubeConfigSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */; };
 		C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */; };
 		C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C88E2279E89600BF77B2 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		C322613A228256980096FD05 /* KubeConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigReader.swift; sourceTree = "<group>"; };
 		C322613C2282589C0096FD05 /* YamlReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlReader.swift; sourceTree = "<group>"; };
 		C322613E22825F4B0096FD05 /* KubeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfig.swift; sourceTree = "<group>"; };
+		C358E0EA228C462E000E921B /* KubeContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeContextMenu.swift; sourceTree = "<group>"; };
 		C374F938228C29EC00E3249D /* KubeSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KubeSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigSpec.swift; sourceTree = "<group>"; };
 		C374F93C228C29ED00E3249D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */,
+				C358E0EA228C462E000E921B /* KubeContextMenu.swift */,
 				C322613E22825F4B0096FD05 /* KubeConfig.swift */,
 				C322613C2282589C0096FD05 /* YamlReader.swift */,
 				C322613A228256980096FD05 /* KubeConfigReader.swift */,
@@ -347,6 +350,7 @@
 				C322613F22825F4B0096FD05 /* KubeConfig.swift in Sources */,
 				C322613D2282589C0096FD05 /* YamlReader.swift in Sources */,
 				C322613B228256980096FD05 /* KubeConfigReader.swift in Sources */,
+				C358E0EB228C462E000E921B /* KubeContextMenu.swift in Sources */,
 				C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
