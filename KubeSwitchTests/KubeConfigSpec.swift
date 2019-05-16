@@ -27,6 +27,18 @@ class KubeConfigSpec: QuickSpec {
             }
         }
 
+        describe("isCurrentContext"){
+            it("should return true when provided context matches current context"){
+                let config:KubeConfig = KubeConfig(yamlContent: yamlContent)
+                expect(config.isCurrentContext(otherContextName: "minikube")).to(beTrue())
+            }
+
+            it("should return false when provided context does not match current context"){
+                let config:KubeConfig = KubeConfig(yamlContent: yamlContent)
+                expect(config.isCurrentContext(otherContextName: "k8s-the-hard-way")).to(beFalse())
+            }
+        }
+
         describe("contexts"){
             it("should return all the contexts"){
                 let context1 = ["cluster": "minikube"]

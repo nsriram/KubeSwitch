@@ -9,6 +9,10 @@ class KubeConfig {
       return self.yamlContent["current-context"] as! String
     }
 
+    func isCurrentContext(otherContextName: String) -> Bool {
+        return otherContextName == self.currentContext()
+    }
+
     func contexts() -> Array<AnyObject> {
         return self.yamlContent["contexts"] as! [AnyObject]
     }

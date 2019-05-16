@@ -31,7 +31,7 @@ class KubeContextMenu: NSObject {
                                       action: #selector(self.contextSelected),
                                       keyEquivalent: "")
             menuItem.target = self
-            if contextName == kubeConfig.currentContext() {
+            if kubeConfig.isCurrentContext(otherContextName: contextName) {
                 menuItem.state = NSControl.StateValue.on
                 self.selectedKubeContext = menuItem
             }
