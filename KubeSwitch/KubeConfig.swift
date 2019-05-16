@@ -13,6 +13,12 @@ class KubeConfig {
         return self.yamlContent["contexts"] as! [AnyObject]
     }
 
+    func contextNames() -> Array<String> {
+        return self.contexts()
+            .map {$0 as! [String: Any]}
+            .map {$0["name"] as! String}
+    }
+
     func changeContext(newContext: String){
       self.yamlContent["current-context"] = newContext
     }

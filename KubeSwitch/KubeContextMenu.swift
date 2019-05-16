@@ -25,9 +25,8 @@ class KubeContextMenu: NSObject {
     func addContextNames(){
         let config = self.kubeConfigReader.read()
         let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)
-        let contexts:Array = kubeConfig.contexts()
-        for context in contexts {
-            let contextName = context["name"] as! String
+        let contextNames:Array = kubeConfig.contextNames()
+        for contextName in contextNames {
             let menuItem = NSMenuItem(title: contextName,
                                       action: #selector(self.contextSelected),
                                       keyEquivalent: "")

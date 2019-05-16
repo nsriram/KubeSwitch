@@ -38,5 +38,25 @@ class KubeConfigSpec: QuickSpec {
                 expect(actualContext.count).to(equal(2))
             }
         }
+
+        describe("contextNames"){
+            it("should return all the context names"){
+                let context1 = [
+                    "context": ["cluster": "minikube", "user":"admin"],
+                    "name":"minikube"] as [String:Any]
+                let context2 = [
+                    "context": ["cluster": "k8s-the-hard-way","user":"cluster-admin"],
+                    "name":"k8s-the-hard-way"]  as [String:Any]
+                let contexts:[Any] = [context1, context2]
+                yamlContent["contexts"] = contexts
+                let config:KubeConfig = KubeConfig(yamlContent: yamlContent)
+
+                let actualContextNames = config.contextNames()
+
+                expect(actualContextNames.count).to(equal(2))
+                expect(actualContextNames).to(contain("minikube"))
+                expect(actualContextNames).to(contain("k8s-the-hard-way"))
+            }
+        }
     }
 }
