@@ -6,9 +6,11 @@ class KubeContextMenu: NSObject {
     var statusItem:NSStatusItem
     var selectedKubeContext: NSMenuItem? = nil
 
-    init(statusItem: NSStatusItem) {
-      self.kubeConfigReader = KubeConfigReader()
-      self.yamlReader = YamlReader()
+    init(statusItem: NSStatusItem,
+         yamlReader: YamlReader,
+         kubeConfigReader: KubeConfigReader) {
+      self.kubeConfigReader = kubeConfigReader
+      self.yamlReader = yamlReader
       self.statusItem = statusItem
     }
     
