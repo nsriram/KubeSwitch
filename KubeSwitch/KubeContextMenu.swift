@@ -16,7 +16,6 @@ class KubeContextMenu: NSObject {
     
     func refresh(){
         self.statusItem.menu?.removeAllItems()
-        self.statusItem.menu?.autoenablesItems = true
         self.addContextNames()
         self.addMenuSeparator()
         self.addExitMenu()
@@ -38,7 +37,7 @@ class KubeContextMenu: NSObject {
             self.statusItem.menu?.addItem(menuItem)
         }
     }
-    
+
     func addMenuSeparator(){
         self.statusItem.menu?.addItem(NSMenuItem.separator())
     }
