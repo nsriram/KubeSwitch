@@ -21,7 +21,7 @@ class KubeContextMenu: NSObject {
         self.addMenuSeparator()
         self.addExitMenu()
     }
-    
+
     func addContextNames(){
         let config = self.kubeConfigReader.read()
         let kubeConfig = self.yamlReader.loadKubeConfig(yaml: config)

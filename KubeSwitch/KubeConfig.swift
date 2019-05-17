@@ -6,7 +6,8 @@ class KubeConfig {
     }
 
     func currentContext() -> String {
-      return self.yamlContent["current-context"] as! String
+        return (self.yamlContent["current-context"] != nil)
+            ? self.yamlContent["current-context"] as! String : ""
     }
 
     func isCurrentContext(otherContextName: String) -> Bool {

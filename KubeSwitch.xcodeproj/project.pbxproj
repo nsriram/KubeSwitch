@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B244C7094763750A990E4C8 /* Pods_KubeSwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5DE79E1EC6F4947624BC58 /* Pods_KubeSwitchTests.framework */; };
+		C314C19E228D9655000DE30D /* KubeContextMenuSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314C19D228D9655000DE30D /* KubeContextMenuSpec.swift */; };
 		C322613B228256980096FD05 /* KubeConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613A228256980096FD05 /* KubeConfigReader.swift */; };
 		C322613D2282589C0096FD05 /* YamlReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613C2282589C0096FD05 /* YamlReader.swift */; };
 		C322613F22825F4B0096FD05 /* KubeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613E22825F4B0096FD05 /* KubeConfig.swift */; };
@@ -16,6 +17,7 @@
 		C3A5C88B2279E89400BF77B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5C88A2279E89400BF77B2 /* AppDelegate.swift */; };
 		C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C88E2279E89600BF77B2 /* Assets.xcassets */; };
 		C3A5C8922279E89600BF77B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A5C8902279E89600BF77B2 /* Main.storyboard */; };
+		C3B60179228DA97100E853A2 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B60178228DA97100E853A2 /* GeneratedMocks.swift */; };
 		D95372B2AB46BBBE63431498 /* Pods_KubeSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 		1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB94E5D613F8BA537BF7A23 /* Pods-KubeSwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitchTests.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests.release.xcconfig"; sourceTree = "<group>"; };
+		C314C19D228D9655000DE30D /* KubeContextMenuSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeContextMenuSpec.swift; sourceTree = "<group>"; };
 		C322613A228256980096FD05 /* KubeConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigReader.swift; sourceTree = "<group>"; };
 		C322613C2282589C0096FD05 /* YamlReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlReader.swift; sourceTree = "<group>"; };
 		C322613E22825F4B0096FD05 /* KubeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfig.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		C3A5C8912279E89600BF77B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3A5C8932279E89600BF77B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A5C8942279E89600BF77B2 /* KubeSwitch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KubeSwitch.entitlements; sourceTree = "<group>"; };
+		C3B60178228DA97100E853A2 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		CFA4397A5906F707187EF4AC /* Pods_KubeSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KubeSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				C374F93A228C29EC00E3249D /* KubeConfigSpec.swift */,
+				C314C19D228D9655000DE30D /* KubeContextMenuSpec.swift */,
+				C3B60178228DA97100E853A2 /* GeneratedMocks.swift */,
 				C374F93C228C29ED00E3249D /* Info.plist */,
 			);
 			path = KubeSwitchTests;
@@ -144,6 +150,7 @@
 			buildConfigurationList = C374F941228C29ED00E3249D /* Build configuration list for PBXNativeTarget "KubeSwitchTests" */;
 			buildPhases = (
 				AE2192DF056B6F13F43E6319 /* [CP] Check Pods Manifest.lock */,
+				C314C1A0228D99C2000DE30D /* ShellScript */,
 				C374F934228C29EC00E3249D /* Sources */,
 				C374F935228C29EC00E3249D /* Frameworks */,
 				C374F936228C29EC00E3249D /* Resources */,
@@ -251,6 +258,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -258,6 +266,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -310,6 +319,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C314C1A0228D99C2000DE30D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\necho \"foo bar\"\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/KubeConfigReader.swift\" \\\n\"${INPUT_DIR}/YamlReader.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
 		D6C8FBDDD72556DFA00D6367 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C314C19E228D9655000DE30D /* KubeContextMenuSpec.swift in Sources */,
+				C3B60179228DA97100E853A2 /* GeneratedMocks.swift in Sources */,
 				C374F93B228C29EC00E3249D /* KubeConfigSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

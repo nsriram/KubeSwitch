@@ -9,6 +9,7 @@ end
 def test_dependency_pods
   pod 'Quick'
   pod 'Nimble'
+  pod 'Cuckoo'
 end
 
 target 'KubeSwitchTests' do

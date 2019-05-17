@@ -17,6 +17,12 @@ class KubeConfigSpec: QuickSpec {
                 let config:KubeConfig = KubeConfig(yamlContent: yamlContent)
                 expect(config.currentContext()).to(equal("minikube"))
             }
+
+            it("should return empty string when no current context present") {
+                yamlContent.removeValue(forKey: "current-context")
+                let config:KubeConfig = KubeConfig(yamlContent: yamlContent)
+                expect(config.currentContext()).to(equal(""))
+            }
         }
 
         describe("changeContext"){
