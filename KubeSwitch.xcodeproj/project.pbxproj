@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B244C7094763750A990E4C8 /* Pods_KubeSwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5DE79E1EC6F4947624BC58 /* Pods_KubeSwitchTests.framework */; };
+		8BF2054B7E875B994878E48A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8BF204A8A5313EED6F9D39B8 /* LICENSE */; };
 		C314C19E228D9655000DE30D /* KubeContextMenuSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C314C19D228D9655000DE30D /* KubeContextMenuSpec.swift */; };
 		C322613B228256980096FD05 /* KubeConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613A228256980096FD05 /* KubeConfigReader.swift */; };
 		C322613D2282589C0096FD05 /* YamlReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322613C2282589C0096FD05 /* YamlReader.swift */; };
@@ -36,6 +37,7 @@
 		120BC42E388F94E30D07C38F /* Pods-KubeSwitchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitchTests.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FF5038B5794241CAAD05FC2 /* Pods-KubeSwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.release.xcconfig"; sourceTree = "<group>"; };
 		8AC4FBE71E63809CB12BF808 /* Pods-KubeSwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitch.debug.xcconfig"; path = "Target Support Files/Pods-KubeSwitch/Pods-KubeSwitch.debug.xcconfig"; sourceTree = "<group>"; };
+		8BF204A8A5313EED6F9D39B8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9AB94E5D613F8BA537BF7A23 /* Pods-KubeSwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KubeSwitchTests.release.xcconfig"; path = "Target Support Files/Pods-KubeSwitchTests/Pods-KubeSwitchTests.release.xcconfig"; sourceTree = "<group>"; };
 		C314C19D228D9655000DE30D /* KubeContextMenuSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeContextMenuSpec.swift; sourceTree = "<group>"; };
 		C322613A228256980096FD05 /* KubeConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubeConfigReader.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				C3A5C8882279E89400BF77B2 /* Products */,
 				BF00EC32E069ED72CE6B657F /* Pods */,
 				769C0318DF4A6827A8EBFA15 /* Frameworks */,
+				8BF204A8A5313EED6F9D39B8 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,6 +246,7 @@
 			files = (
 				C3A5C88F2279E89600BF77B2 /* Assets.xcassets in Resources */,
 				C3A5C8922279E89600BF77B2 /* Main.storyboard in Resources */,
+				8BF2054B7E875B994878E48A /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

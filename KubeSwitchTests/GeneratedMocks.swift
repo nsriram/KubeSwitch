@@ -1,10 +1,11 @@
-// MARK: - Mocks generated from file: KubeSwitch/KubeConfigReader.swift at 2019-05-17 12:33:25 +0000
+// MARK: - Mocks generated from file: KubeSwitch/KubeConfigReader.swift at 2019-05-17 14:29:19 +0000
 
 
 import Cuckoo
 @testable import KubeSwitch
 
 import Cocoa
+import os.log
 
 
  class MockKubeConfigReader: KubeConfigReader, Cuckoo.ClassMock {
@@ -124,13 +125,14 @@ import Cocoa
 }
 
 
-// MARK: - Mocks generated from file: KubeSwitch/YamlReader.swift at 2019-05-17 12:33:25 +0000
+// MARK: - Mocks generated from file: KubeSwitch/YamlReader.swift at 2019-05-17 14:29:19 +0000
 
 
 import Cuckoo
 @testable import KubeSwitch
 
 import Yams
+import os.log
 
 
  class MockYamlReader: YamlReader, Cuckoo.ClassMock {
