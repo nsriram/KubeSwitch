@@ -11,7 +11,7 @@ KubeSwitch lists the available kubernetes cluster contexts on the mac as a Mac's
 
 ## Download
 
-<a href="https://github.com/nsriram/KubeSwitch/releases/download/v1.0.0/KubeSwitch.app.zip">Download v1.0.0</a>
+<a href="https://github.com/nsriram/KubeSwitch/releases/download/v1.0.1/KubeSwitch.app.zip">Download v1.0.1</a>
 
 ## Usage
 
